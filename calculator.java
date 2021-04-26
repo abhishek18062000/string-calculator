@@ -45,6 +45,9 @@ class calculator
 			if(num.equals("")){
 				sum+=0;
 			}
+			else if(Integer.parseInt(num)>1000){
+				sum+=(Integer.parseInt(num)-1000);
+			}
 			else{
 				sum+=Integer.parseInt(num);
 			}
