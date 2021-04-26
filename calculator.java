@@ -4,11 +4,21 @@ import java.io.*;
 class calculator
 {
 	public static void main(String[] args){
+		
 		Scanner scn= new Scanner(System.in);
-		String str=scn.nextLine();
-		int sum=Add(str);
+		String str = new String(scn.next());
+		String s=handelN(str);
+		System.out.println(s);
+		int sum=Add(s);
 		System.out.println(sum);
 	}
+	
+	public static String handelN(String strWithN){
+		String r=strWithN.replace("\\", ",");
+		String s=r.replace('n',',');
+		return s;
+	}
+
 	public static int Add(String numbers){
 		String[] res = numbers.split("[,]", 0);
 		int sum=0;
