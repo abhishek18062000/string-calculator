@@ -9,9 +9,27 @@ class calculator
 		String str = new String(scn.next());
 		String s=handelN(str);
 		//System.out.println(s);
-		int sum=Add(s);
-		System.out.println(sum);
-	}
+		char[] ch = s.toCharArray();
+		boolean isNegative=false;
+		String neg= "negatives not allowed ";
+		for(int i=0;i<ch.length;i++)
+		 {
+			if(ch[i]=='-')
+			{
+			  isNegative=true;
+			  neg=neg+"-"+ch[i+1]+" ";
+			} 
+		 }
+			if(isNegative)
+		  {
+			System.out.println(neg);
+		  }
+		 else
+		   {
+			   int sum=Add(s);
+				System.out.println(sum);
+		   }
+			}
 	
 	public static String handelN(String strWithN){
 		String r=strWithN.replace("\\", ";");
