@@ -32,7 +32,6 @@ class calculator
 			}
 	
 	public static String handelN(String strWithN){
-		//String r=strWithN.replace("\\", ";");
 		String numberOnly= strWithN.replaceAll("[^0-9]", ";");
 		return numberOnly;
 	}
