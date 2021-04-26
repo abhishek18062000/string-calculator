@@ -5,7 +5,7 @@ class calculator
 {
 	public static void main(String[] args){
 		Scanner scn= new Scanner(System.in);
-		String str=scn.next();
+		String str=scn.nextLine();
 		int sum=Add(str);
 		System.out.println(sum);
 	}
@@ -14,7 +14,7 @@ class calculator
 		int sum=0;
 		for(String num: res) {
 			if(num.equals("")){
-				sum=0;
+				sum+=0;
 			}
 			else{
 				sum+=Integer.parseInt(num);
