@@ -32,10 +32,11 @@ class calculator
 			}
 	
 	public static String handelN(String strWithN){
-		String r=strWithN.replace("\\", ";");
-		String s=r.replace('n',';');
-		String t=s.replace('/',';');
-		return t;
+		//String r=strWithN.replace("\\", ";");
+		//String s=strWithN.replace('n',';');
+		String numberOnly= strWithN.replaceAll("[^0-9]", ";");
+		//String t=s.replace('/',';');
+		return numberOnly;
 	}
 
 	public static int Add(String numbers){
