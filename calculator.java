@@ -4,6 +4,6 @@ class calculator
 		
 	}
 	public static add(String numbers){
-		
+		String a=numbers;
 	}
 }
